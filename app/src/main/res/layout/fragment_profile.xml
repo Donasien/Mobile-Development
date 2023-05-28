@@ -4,48 +4,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.main.ui.profile.ProfileFragment">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:fillViewport="true"
+       >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/profil_img_akun"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginTop="50dp"
-                android:tint="?attr/colorOnPrimary"
-                android:src="@drawable/baseline_account_circle_24"
-                android:background="?attr/colorPrimary"
-                android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/profil_card_akun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:cardCornerRadius="150dp"
+                app:cardElevation="10dp"
+                app:contentPadding="4dp"
+                app:cardBackgroundColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                >
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    app:cardCornerRadius="150dp"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/profil_image_akun"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/baseline_account_circle_24"
+                        app:tint="?attr/colorOnPrimary" />
+                </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/profil_tv_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/please_join_us_first"
-                android:textSize="28sp"
                 android:textAlignment="center"
+                android:textSize="23sp"
+                android:textColor="?attr/colorOnSecondary"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/profil_img_akun" />
+                app:layout_constraintTop_toBottomOf="@+id/profil_card_akun" />
 
             <TextView
                 android:id="@+id/profil_tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/please_join_us_first"
+                android:text="@string/nothing"
+                android:background="@color/green_three"
+                android:padding="5dp"
                 android:textSize="15sp"
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +76,8 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profil_tv_email">
@@ -66,7 +85,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="4dp"
+                    android:layout_marginVertical="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -77,8 +96,8 @@
                         app:cardCornerRadius="10dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:padding="10dp"
                             android:src="@drawable/profile" />
                     </com.google.android.material.card.MaterialCardView>
@@ -86,9 +105,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_marginStart="10dp"
                         android:text="@string/my_profile"
-                        android:textSize="18sp" />
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -99,7 +119,7 @@
                         <androidx.constraintlayout.utils.widget.ImageFilterView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:tint="?attr/colorPrimary"
+                            android:tint="@color/black"
                             android:src="@drawable/baseline_arrow_right_24" />
                     </LinearLayout>
                 </LinearLayout>
@@ -107,7 +127,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="4dp"
+                    android:layout_marginVertical="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -118,8 +138,8 @@
                         app:cardCornerRadius="10dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:padding="10dp"
                             android:src="@drawable/question" />
                     </com.google.android.material.card.MaterialCardView>
@@ -128,8 +148,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
                         android:text="@string/your_question"
-                        android:textSize="18sp" />
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -140,7 +161,7 @@
                         <androidx.constraintlayout.utils.widget.ImageFilterView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:tint="?attr/colorPrimary"
+                            android:tint="@color/black"
                             android:src="@drawable/baseline_arrow_right_24" />
                     </LinearLayout>
                 </LinearLayout>
@@ -148,7 +169,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="4dp"
+                    android:layout_marginVertical="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -159,8 +180,8 @@
                         app:cardCornerRadius="10dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:padding="10dp"
                             android:src="@drawable/info" />
                     </com.google.android.material.card.MaterialCardView>
@@ -169,8 +190,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
                         android:text="@string/about_us"
-                        android:textSize="18sp" />
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -181,7 +203,7 @@
                         <androidx.constraintlayout.utils.widget.ImageFilterView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:tint="?attr/colorPrimary"
+                            android:tint="@color/black"
                             android:src="@drawable/baseline_arrow_right_24" />
                     </LinearLayout>
                 </LinearLayout>
@@ -189,7 +211,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="4dp"
+                    android:layout_marginVertical="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -200,8 +222,8 @@
                         app:cardCornerRadius="10dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:padding="10dp"
                             android:src="@drawable/password" />
                     </com.google.android.material.card.MaterialCardView>
@@ -211,7 +233,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:text="@string/settings"
-                        android:textSize="18sp" />
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -222,7 +245,7 @@
                         <androidx.constraintlayout.utils.widget.ImageFilterView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:tint="?attr/colorPrimary"
+                            android:tint="@color/black"
                             android:src="@drawable/baseline_arrow_right_24" />
                     </LinearLayout>
                 </LinearLayout>
@@ -230,7 +253,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="4dp"
+                    android:layout_marginVertical="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -241,8 +264,8 @@
                         app:cardCornerRadius="10dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:padding="10dp"
                             android:src="@drawable/languages" />
                     </com.google.android.material.card.MaterialCardView>
@@ -252,7 +275,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:text="@string/languages"
-                        android:textSize="18sp" />
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -263,7 +287,7 @@
                         <androidx.constraintlayout.utils.widget.ImageFilterView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:tint="?attr/colorPrimary"
+                            android:tint="@color/black"
                             android:src="@drawable/baseline_arrow_right_24" />
                     </LinearLayout>
                 </LinearLayout>
@@ -275,9 +299,11 @@
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="20dp"
                 android:layout_height="wrap_content"
-                android:text="@string/logout"
+                android:text="@string/login"
+                android:textSize="13sp"
                 android:textColor="@color/white"
                 android:layout_marginTop="10dp"
+                app:backgroundTint="?attr/colorPrimary"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

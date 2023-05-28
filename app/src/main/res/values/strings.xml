@@ -5,19 +5,17 @@
     <string name="start_desc">Donasien is a humanitarian application that focuses on helping health costs for the underprivileged. You can apply for donations for moderate to severe illnesses and also check and analyze for minor illnesses. You can also make donations to help the community.</string>
     <string name="greeting_title">Welcome to</string>
     <string name="get_started">Get Started</string>
-    <string name="login">Login</string>
-    <string name="version_app">V. 1.0</string>
-    <string name="hi_donasians">Hi Donasians,</string>
-    <string name="sign_in_to_connected_to_us">Sign in to connected to us</string>
+    <string name="login">Sign In</string>
+    <string name="version_app">version 1.0</string>
+    <string name="greetings">Welcome To Donasein!</string>
     <string name="enter_your_email">enter your email</string>
     <string name="enter_your_password">enter your password</string>
-    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password">Forget Password</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
-    <string name="register">Register</string>
-    <string name="login_with_google">Login with Google</string>
-    <string name="let_s_sign_up_to_join_with_donasians">Let\'s sign up to join with donasians</string>
-    <string name="enter_your_username">enter your username</string>
-    <string name="term_desc">Joining us means that you have agreed to the terms and policies determined</string>
+    <string name="register">Sign Up</string>
+    <string name="login_with_google">Sign In with Google</string>
+    <string name="enter_your_username">enter your fullname</string>
+    <string name="term_desc">By Creating an account you agree to our Terms of Service and Privacy Policy</string>
     <string name="do_you_have_an_account">Do you have an account?</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_donate">Donate</string>
@@ -25,9 +23,38 @@
     <string name="title_profile">Profile</string>
     <string name="please_join_us_first">Please join us first</string>
     <string name="my_profile">My Profile</string>
-    <string name="your_question">Your Question</string>
+    <string name="your_question">FAQ</string>
     <string name="about_us">About Us</string>
     <string name="settings">Settings</string>
     <string name="languages">Languages</string>
     <string name="logout">Logout</string>
+    <string name="nothing">-</string>
+    <string name="back">Back</string>
+    <string name="verification_your_email">Verification Email</string>
+    <string name="send_verification">Send Verification</string>
+    <string name="main_features">Features</string>
+    <string name="disease_scanning">Scanning</string>
+    <string name="donation_submission">Submission</string>
+    <string name="health_tips">Health Tips</string>
+    <string name="donation_history">Donation History</string>
+    <string name="donation_status">Donation Status</string>
+    <string name="web_client_id" translatable="false">576853180246-lq0fjqimi7qldke9d4turps2iure4idb.apps.googleusercontent.com</string>
+    <string name="remember_me">Remember me</string>
+    <string name="join_with_us">Join With Us</string>
+    <string name="hello">You\'re Not Logged In Yet</string>
+    <string name="login_call_to_action">Click here to login</string>
+    <string name="profile">Profile</string>
+    <string name="search_donation_here">Search donation here</string>
+    <string name="donation">Donation</string>
+    <string name="donation_raised">Donation raised</string>
+    <string name="example_money">Rp250.500.000</string>
+    <string name="show_all">Show All</string>
+    <string name="pengajuan_donasi">Donate Submission</string>
+    <string name="camera">camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="enter_money">enter your cost</string>
+    <string name="enter_date">enter your end date</string>
+    <string name="enter_title">enter your title</string>
+
+
 </resources>

@@ -5,7 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.Donasein"
+    android:background="@color/background"
     tools:context=".ui.user.RegisterActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading_lottie"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:lottie_fileName="loading.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/black"
+        android:visibility="invisible"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,174 +30,215 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/lottieAnimationView"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+
+            <io.github.florent37.shapeofview.shapes.ArcView
+                android:id="@+id/shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_arc_height="40dp"
+                app:shape_arc_position="bottom"
                 app:layout_constraintTop_toTopOf="parent"
-                app:lottie_autoPlay="true"
-                app:lottie_colorFilter="?attr/colorPrimary"
-                app:lottie_fileName="register_animation.json"
-                app:lottie_loop="true"
-                app:lottie_renderMode="automatic" />
-
-            <TextView
-                android:id="@+id/register_tv_signUp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register"
-                android:textSize="38sp"
-                android:textStyle="bold"
-                android:textAllCaps="true"
-                android:letterSpacing="0.1"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
-
-            <TextView
-                android:id="@+id/register_tv_desc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/let_s_sign_up_to_join_with_donasians"
-                android:layout_marginHorizontal="30dp"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/register_tv_signUp" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/register_et_username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_your_username"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="5dp"
-                app:boxBackgroundColor="?attr/colorOnPrimary"
-                app:boxCornerRadiusTopStart="40dp"
-                app:boxCornerRadiusTopEnd="40dp"
-                app:boxCornerRadiusBottomStart="40dp"
-                app:boxCornerRadiusBottomEnd="40dp"
-                android:elevation="2dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/register_tv_desc"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                <com.google.android.material.textfield.TextInputEditText
+                >
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:paddingHorizontal="30dp"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="15dp"
+                    android:background="?attr/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <ImageView
+                            android:id="@+id/register_btn_back"
+                            android:layout_width="40dp"
+                            android:layout_height="30dp"
+                            app:srcCompat="@drawable/baseline_arrow_back_ios_24"
+                            android:contentDescription="@string/back" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:letterSpacing="0.01"
+                            android:textAllCaps="true"
+                            android:textSize="18sp"
+                            android:textAlignment="textEnd"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:text="@string/register" />
+                    </LinearLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/register_et_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_your_email"
-                android:layout_marginHorizontal="30dp"
-                app:boxBackgroundColor="?attr/colorOnPrimary"
-                app:boxCornerRadiusTopStart="40dp"
-                app:boxCornerRadiusTopEnd="40dp"
-                app:boxCornerRadiusBottomStart="40dp"
-                app:boxCornerRadiusBottomEnd="40dp"
-                android:elevation="2dp"
-                app:endIconMode="clear_text"
-                android:layout_marginVertical="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/register_et_username"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        app:lottie_colorFilter="?attr/colorOnPrimary"
+                        app:lottie_fileName="register_animation.json"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"/>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/register_et_pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_your_password"
-                android:layout_marginHorizontal="30dp"
-                app:boxBackgroundColor="?attr/colorOnPrimary"
-                app:boxCornerRadiusTopStart="40dp"
-                app:boxCornerRadiusTopEnd="40dp"
-                app:boxCornerRadiusBottomStart="40dp"
-                app:boxCornerRadiusBottomEnd="40dp"
-                android:elevation="2dp"
-                app:endIconMode="password_toggle"
-                android:layout_marginVertical="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/register_et_email"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/register_tv_desc_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/term_desc"
-                android:layout_marginHorizontal="30dp"
-                android:textSize="15sp"
-                android:layout_marginVertical="10dp"
-                android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/register_et_pass" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/register_btn_signUp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginVertical="10dp"
-                android:paddingVertical="8dp"
-                android:text="@string/register"
-                android:textSize="15sp"
-                android:textColor="@color/white"
-                app:cornerRadius="20dp"
-                app:iconTint="@color/white"
-                app:icon="@drawable/baseline_login_24"
-                app:iconGravity="textEnd"
-                app:iconPadding="8dp"
-                app:iconSize="20dp"
-                app:backgroundTint="?attr/colorPrimary"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/register_tv_desc_btn" />
+                </LinearLayout>
+            </io.github.florent37.shapeofview.shapes.ArcView>
 
             <LinearLayout
-                android:id="@+id/linearLayout2"
+                android:id="@+id/register_layout_et"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="30dp"
+                app:layout_constraintTop_toBottomOf="@id/shape"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/join_with_us"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSecondary"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/register_et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    app:boxBackgroundColor="?attr/colorOnPrimary"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:hintEnabled="false"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    android:elevation="2dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/register_etx_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:hint="@string/enter_your_username"
+                        android:textColorHint="@color/black"
+                        android:autofillHints="name"
+                        android:inputType="textPersonName"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/register_et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="?attr/colorOnPrimary"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:hintEnabled="false"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    android:elevation="2dp"
+                    app:endIconTint="@color/black"
+                    app:endIconMode="clear_text"
+                    android:layout_marginVertical="5dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/register_etx_email"
+                        android:layout_width="match_parent"
+                        android:hint="@string/enter_your_email"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:autofillHints="emailAddress"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/register_et_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="?attr/colorOnPrimary"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:hintEnabled="false"
+                    android:elevation="2dp"
+                    app:endIconTint="@color/black"
+                    app:endIconMode="password_toggle"
+                    android:layout_marginVertical="5dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/register_etx_pass"
+                        android:layout_width="match_parent"
+                        android:hint="@string/enter_your_password"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:autofillHints="password"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/register_layout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="30dp"
+                app:layout_constraintTop_toBottomOf="@id/register_layout_et"
+                >
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:text="@string/term_desc"
+                    android:textColor="?attr/colorOnSecondary"
+                    app:buttonIconTint="?attr/colorOnPrimary"
+                    app:buttonTint="?attr/colorPrimary"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/register_btn_signUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:paddingVertical="8dp"
+                    android:text="@string/register"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    app:cornerRadius="10dp"
+
+                    app:backgroundTint="?attr/colorPrimary"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/register_layout_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginVertical="10dp"
                 android:paddingVertical="2dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/register_btn_signUp">
+                app:layout_constraintTop_toBottomOf="@+id/register_layout_btn">
 
                 <TextView
                     android:id="@+id/register_tv_cta_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSecondary"
                     android:letterSpacing="0.05"
                     android:text="@string/do_you_have_an_account"
                     android:textSize="15sp" />

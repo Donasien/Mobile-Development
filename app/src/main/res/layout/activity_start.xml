@@ -4,109 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_green"
     tools:context=".ui.splash.StartActivity">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottieAnimationView2"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_fileName="welcome_animation.json"
-        app:lottie_loop="true" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:orientation="vertical"
-        app:cardElevation="12dp"
-        app:cardBackgroundColor="?attr/colorOnPrimary"
-        app:cardCornerRadius="20dp"
-        app:contentPadding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView2">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:paddingBottom="100dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/stsc_layout_lottie"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="welcome_animation.json"
+                app:lottie_loop="true" />
+
+            <LinearLayout
+                android:id="@+id/stsc_layout_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:paddingVertical="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stsc_layout_lottie">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/greetings"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:letterSpacing="0.1"
+                    android:textStyle="bold"
+                    android:layout_marginVertical="10dp"
+                    android:textColor="@color/white"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:cardBackgroundColor="@color/green_two"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:letterSpacing="0.1"
+                        android:lineHeight="22dp"
+                        android:text="@string/start_desc"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_marginHorizontal="30dp"
+                android:paddingVertical="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stsc_layout_card">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/stsc_btn_anonym"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/greeting_title"
-                    android:textAlignment="center"
-                    android:textColor="@color/jungle_green"
-                    android:textSize="14sp" />
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:cornerRadius="10dp"
+                    app:elevation="2dp"
+                    android:textSize="12sp"
+                    android:text="@string/get_started"
+                    android:letterSpacing="0.2"
+                    android:textColor="@color/white"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/stsc_btn_login"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:text="@string/app_name"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textColor="@color/mint"
-                    android:textSize="14sp" />
+                    android:textSize="12sp"
+                    app:elevation="2dp"
+                    app:cornerRadius="10dp"
+                    android:letterSpacing="0.2"
+                    app:backgroundTint="@color/yellow"
+                    android:text="@string/login"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-                android:letterSpacing="0.1"
-                android:lineHeight="22dp"
-                android:text="@string/start_desc"
-                android:textAlignment="center"
-                android:textColor="?attr/colorPrimary"
-                android:textSize="12dp" />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="30dp"
-        android:paddingVertical="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/stsc_btn_anonym"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:backgroundTint="?attr/colorPrimary"
-            android:layout_weight="1"
-            android:layout_marginEnd="5dp"
-            app:cornerRadius="10dp"
-            android:textSize="12sp"
-            android:text="@string/get_started"
-            android:textColor="@color/white"/>
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/stsc_btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="12sp"
-            app:cornerRadius="10dp"
-            android:layout_marginStart="5dp"
-            app:backgroundTint="?attr/colorSecondary"
-            android:text="@string/login"
-            android:textColor="@color/white"/>
-
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

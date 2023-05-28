@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "576853180246",
+    "project_id": "donasein-e1d6d",
+    "storage_bucket": "donasein-e1d6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576853180246:android:5f8adaf1889bd6549760f7",
+        "android_client_info": {
+          "package_name": "com.codenesia.donasein"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576853180246-ab0vaq517hvg66rlqdvrg9pmnmuvpncm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codenesia.donasein",
+            "certificate_hash": "1ed7f1971a37db3bbe7f8e1de23607954bddf680"
+          }
+        },
+        {
+          "client_id": "576853180246-lq0fjqimi7qldke9d4turps2iure4idb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxe7OMl5XIYoygVdQOMyO6xzfp4PPgNhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576853180246-lq0fjqimi7qldke9d4turps2iure4idb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

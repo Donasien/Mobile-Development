@@ -51,7 +51,7 @@
                     android:paddingHorizontal="30dp"
                     android:paddingTop="30dp"
                     android:paddingBottom="15dp"
-                    android:background="?attr/colorPrimary"
+                    android:background="@drawable/bg_gradient_green"
                     android:gravity="center_vertical"
                     android:orientation="vertical">
                     <LinearLayout
@@ -200,9 +200,10 @@
                 >
 
                 <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/register_check"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="top"
+                    android:gravity="center_vertical"
                     android:text="@string/term_desc"
                     android:textColor="?attr/colorOnSecondary"
                     app:buttonIconTint="?attr/colorOnPrimary"

@@ -1,12 +1,14 @@
 package com.codenesia.donasein.ui.main.ui.donate
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.codenesia.donasein.data.repository.NewsHealthRepo
+import com.codenesia.donasein.data.repository.DonateRepo
 
-class DonateViewModel(private val newsHealthRepo: NewsHealthRepo) : ViewModel() {
+class DonateViewModel(private val donateRepo: DonateRepo) : ViewModel() {
 
-    fun getNewsHealth() = newsHealthRepo.getNewsHealth()
+    fun getAllDonate() = donateRepo.getAllDonate()
+}
+
+class NewsViewModel(private val donateRepo: DonateRepo): ViewModel() {
+    fun getNewsHealth() = donateRepo.getNewsHealth()
 
 }

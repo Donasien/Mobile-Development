@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 app:cardCornerRadius="150dp"
-                app:cardElevation="10dp"
+                app:cardElevation="3dp"
                 app:contentPadding="4dp"
                 app:cardBackgroundColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,7 +99,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:padding="10dp"
-                            android:src="@drawable/profile" />
+                            android:src="@drawable/assets_profile" />
                     </com.google.android.material.card.MaterialCardView>
 
                     <TextView
@@ -141,7 +141,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:padding="10dp"
-                            android:src="@drawable/question" />
+                            android:src="@drawable/assets_faq" />
                     </com.google.android.material.card.MaterialCardView>
 
                     <TextView
@@ -183,7 +183,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:padding="10dp"
-                            android:src="@drawable/info" />
+                            android:src="@drawable/assets_info" />
                     </com.google.android.material.card.MaterialCardView>
 
                     <TextView
@@ -225,7 +225,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:padding="10dp"
-                            android:src="@drawable/password" />
+                            android:src="@drawable/assets_password" />
                     </com.google.android.material.card.MaterialCardView>
 
                     <TextView
@@ -267,7 +267,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:padding="10dp"
-                            android:src="@drawable/languages" />
+                            android:src="@drawable/assets_languages" />
                     </com.google.android.material.card.MaterialCardView>
 
                     <TextView

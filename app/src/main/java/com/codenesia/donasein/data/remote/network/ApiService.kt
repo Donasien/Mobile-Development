@@ -1,5 +1,6 @@
 package com.codenesia.donasein.data.remote.network
 
+import com.codenesia.donasein.data.remote.response.DonateResponse
 import com.codenesia.donasein.data.remote.response.NewsHealthResponse
 import com.codenesia.donasein.data.remote.response.RegisterResponse
 import com.google.android.gms.common.api.internal.ApiKey
@@ -13,11 +14,15 @@ interface ApiService {
         @Query("apiKey") apiKey: String,
     ) : NewsHealthResponse
 
+    @GET("all-donation")
+    suspend fun getAllDonation() : DonateResponse
+
+
     @FormUrlEncoded
     @POST("register")
     suspend fun registerUser(
-        @Field("name") name: String,
         @Field("email") email: String,
-        @Field("token") password: String
+        @Field("fullname") fullname: String,
+        @Field("token") token: String
     ): RegisterResponse
 }

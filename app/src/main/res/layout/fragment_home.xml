@@ -61,7 +61,7 @@
                                     android:contentDescription="@string/nothing"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:src="@drawable/notification"/>
+                                    android:src="@drawable/assets_notification"/>
                             </LinearLayout>
 
                         </LinearLayout>
@@ -83,7 +83,7 @@
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:layout_marginEnd="5dp"
-                                    android:src="@drawable/bookmark"/>
+                                    android:src="@drawable/assets_bookmark"/>
                                 <TextView
                                     android:id="@+id/home_tv_history"
                                     android:layout_width="wrap_content"
@@ -113,6 +113,55 @@
                 </io.github.florent37.shapeofview.shapes.ArcView>
 
 
+                <LinearLayout
+                    android:id="@+id/home_layout_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/home_layout_header">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        app:cardElevation="1dp"
+                        app:cardCornerRadius="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2"
+                            android:background="@drawable/bg_gradient_green_icon"
+                            android:padding="15dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/qoute_helping"
+                                android:textSize="15sp"
+                                android:layout_marginEnd="10dp"
+                                android:textColor="@color/white"
+                                android:letterSpacing="0.10"/>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="20dp"
+                                android:layout_height="wrap_content">
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:background="@color/white"
+                                    app:lottie_autoPlay="true"
+                                    app:lottie_loop="false"
+                                    app:lottie_fileName="plant.json"/>
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/home_layout_features"
@@ -121,7 +170,7 @@
                     android:layout_marginTop="10dp"
                     android:paddingHorizontal="20dp"
                     android:orientation="vertical"
-                    app:layout_constraintTop_toBottomOf="@id/home_layout_header">
+                    app:layout_constraintTop_toBottomOf="@id/home_layout_card">
 
                     <TextView
                         android:layout_width="wrap_content"

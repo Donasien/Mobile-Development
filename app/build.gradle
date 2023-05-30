@@ -98,9 +98,6 @@ dependencies {
     implementation "androidx.camera:camera-lifecycle:${camerax_version}"
     implementation "androidx.camera:camera-view:${camerax_version}"
 
-    // scanner
-    implementation 'io.github.mayuce:AndroidDocumentScanner:1.6.1'
-
 
 
 

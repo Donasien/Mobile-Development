@@ -8,9 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.codenesia.donasein.data.Results
 import com.codenesia.donasein.databinding.FragmentDonateBinding
 import com.codenesia.donasein.ui.ViewModelFactory
+import com.codenesia.donasein.ui.detailDonate.DetailDonateActivity
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 
@@ -22,12 +24,53 @@ class DonateFragment : Fragment() {
         ViewModelFactory(requireActivity())
     }
 
+    private val newsViewModel: NewsViewModel by viewModels {
+        ViewModelFactory(requireActivity())
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val imageList = ArrayList<SlideModel>() // Create image list
 
-        donateViewModel.getNewsHealth().observe(viewLifecycleOwner) { result ->
+        showNewsData(imageList)
+        showDonateData()
+
+    }
+
+    private fun showDonateData() {
+        val donateAdapter = DonateAdapter { donate ->
+            val intent = Intent(activity, DetailDonateActivity::class.java)
+            startActivity(intent)
+        }
+        donateViewModel.getAllDonate().observe(viewLifecycleOwner) { result ->
+            if (result != null) {
+                when (result) {
+                    is Results.Loading -> {
+
+                    }
+
+                    is Results.Success -> {
+                        val dataDonate = result.data
+                        val listData = dataDonate.data
+                        donateAdapter.submitList(listData)
+                        binding.donateRvDonate.apply {
+                            layoutManager = LinearLayoutManager(context)
+                            setHasFixedSize(true)
+                            adapter = donateAdapter
+                        }
+                    }
+
+                    is Results.Error -> {
+                        Log.e("Donate Adapter", result.error.toString())
+                    }
+                }
+            }
+        }
+    }
+
+    private fun showNewsData(imageList: ArrayList<SlideModel>) {
+        newsViewModel.getNewsHealth().observe(viewLifecycleOwner) { result ->
             if (result!=null) {
                 val imageDefaultUrl = "https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png"
                 when(result) {
@@ -50,8 +93,8 @@ class DonateFragment : Fragment() {
                 binding.donateImageSlider.setImageList(imageList)
             }
         }
-
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

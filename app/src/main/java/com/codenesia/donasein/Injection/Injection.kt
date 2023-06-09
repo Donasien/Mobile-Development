@@ -17,6 +17,11 @@ object Injection {
         return DonateRepo(apiService)
     }
 
+    fun apiMedicalInjection(context: Context): DonateRepo {
+        val apiService = ApiConfig().getApiServiceForMedicalAPI()
+        return DonateRepo(apiService)
+    }
+
     fun newsHealthInjection(context: Context): DonateRepo {
         val apiService = ApiConfig().getApiServiceForNewsHealth()
         return DonateRepo(apiService)

@@ -75,3 +75,97 @@ data class RegisterItem(
     @field:SerializedName("token")
     val token: String? = null
 ) : Parcelable
+
+@Parcelize
+data class LogoutResponse(
+
+    @field:SerializedName("data")
+    val data: DataLogout? = null,
+
+    @field:SerializedName("success")
+    val success: Boolean? = null,
+
+    @field:SerializedName("message")
+    val message: String? = null
+) : Parcelable
+
+@Parcelize
+data class DataLogout(
+
+    @field:SerializedName("email")
+    val email: String? = null,
+
+    @field:SerializedName("token")
+    val token: String? = null
+) : Parcelable
+
+@Parcelize
+data class LoginGoogleResponse(
+
+    @field:SerializedName("data")
+    val data: DataLoginGoogle? = null,
+
+    @field:SerializedName("success")
+    val success: Boolean? = null,
+
+    @field:SerializedName("message")
+    val message: String? = null
+) : Parcelable
+@Parcelize
+data class DataLoginGoogle(
+
+    @field:SerializedName("fullname")
+    val fullname: String? = null,
+
+    @field:SerializedName("email")
+    val email: String? = null,
+
+    @field:SerializedName("token")
+    val token: String? = null
+) : Parcelable
+
+@Parcelize
+data class ProfileResponse(
+
+    @field:SerializedName("data")
+    val data: ProfileData? = null,
+
+    @field:SerializedName("success")
+    val success: Boolean? = null,
+
+    @field:SerializedName("message")
+    val message: String? = null
+) : Parcelable
+
+@Parcelize
+data class ProfileData(
+
+    @field:SerializedName("kk")
+    var kk: String? = null,
+
+    @field:SerializedName("address")
+    var address: String? = null,
+
+    @field:SerializedName("phone")
+    var phone: String? = null,
+
+    @field:SerializedName("rekening")
+    var rekening: String? = null,
+
+    @field:SerializedName("bank")
+    var bank: String? = null,
+
+    @field:SerializedName("gender")
+    var gender: String? = null,
+
+    @field:SerializedName("id")
+    val id: Int? = null,
+
+    @field:SerializedName("fullname")
+    var fullname: String? = null,
+
+    @field:SerializedName("email")
+    var email: String? = null
+) : Parcelable
+
+

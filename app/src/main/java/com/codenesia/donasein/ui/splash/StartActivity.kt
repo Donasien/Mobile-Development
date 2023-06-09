@@ -1,9 +1,13 @@
 package com.codenesia.donasein.ui.splash
 
 import android.content.Intent
+import android.graphics.Color
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
 import com.codenesia.donasein.data.local.preference.UserPreferences
 import com.codenesia.donasein.databinding.ActivityStartBinding
@@ -20,8 +24,12 @@ class StartActivity : AppCompatActivity() {
         binding = ActivityStartBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
+        window.apply {
+            clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+            decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            statusBarColor = Color.TRANSPARENT
+        }
 
         binding.stscBtnAnonym.setOnClickListener { intentTo(1) }
         binding.stscBtnLogin.setOnClickListener { intentTo(2) }

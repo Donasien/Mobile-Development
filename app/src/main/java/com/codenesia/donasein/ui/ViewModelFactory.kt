@@ -7,6 +7,8 @@ import com.codenesia.donasein.Injection.Injection
 import com.codenesia.donasein.ui.main.ui.donate.DonateViewModel
 import com.codenesia.donasein.ui.main.ui.donate.NewsViewModel
 import com.codenesia.donasein.ui.main.ui.home.HomeViewModel
+import com.codenesia.donasein.ui.profile.ProfileViewModel
+import com.codenesia.donasein.ui.submission.SubmissionMedicalApiViewModel
 import com.codenesia.donasein.ui.user.UserViewModel
 
 class ViewModelFactory(private val context: Context): ViewModelProvider.Factory {
@@ -14,10 +16,14 @@ class ViewModelFactory(private val context: Context): ViewModelProvider.Factory 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(DonateViewModel::class.java)) {
             return DonateViewModel(Injection.allDonate(context)) as T
-        } else if (modelClass.isAssignableFrom(UserViewModel::class.java)){
+        } else if (modelClass.isAssignableFrom(UserViewModel::class.java)) {
             return UserViewModel(Injection.userInjection(context)) as T
         } else if (modelClass.isAssignableFrom(NewsViewModel::class.java)) {
             return NewsViewModel(Injection.newsHealthInjection(context)) as T
+        } else if (modelClass.isAssignableFrom(ProfileViewModel::class.java)) {
+            return ProfileViewModel(Injection.userInjection(context)) as T
+        } else if (modelClass.isAssignableFrom(SubmissionMedicalApiViewModel::class.java)) {
+            return SubmissionMedicalApiViewModel(Injection.apiMedicalInjection(context)) as T
         }
         throw java.lang.IllegalArgumentException("Unknown ViewModel Class")
     }

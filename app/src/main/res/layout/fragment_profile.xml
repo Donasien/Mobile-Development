@@ -35,8 +35,8 @@
                     android:layout_height="wrap_content">
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/profil_image_akun"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/baseline_account_circle_24"
                         app:tint="?attr/colorOnPrimary" />
                 </com.google.android.material.card.MaterialCardView>
@@ -83,6 +83,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/profil_tv_email">
 
                 <LinearLayout
+                    android:id="@+id/profile_btn_myprofile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
@@ -124,7 +125,12 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
                 <LinearLayout
+                    android:id="@+id/profile_faq"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
@@ -165,8 +171,13 @@
                             android:src="@drawable/baseline_arrow_right_24" />
                     </LinearLayout>
                 </LinearLayout>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
 
                 <LinearLayout
+                    android:id="@+id/profile_about_us"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
@@ -207,8 +218,13 @@
                             android:src="@drawable/baseline_arrow_right_24" />
                     </LinearLayout>
                 </LinearLayout>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
 
                 <LinearLayout
+                    android:id="@+id/profile_settings"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
@@ -249,8 +265,13 @@
                             android:src="@drawable/baseline_arrow_right_24" />
                     </LinearLayout>
                 </LinearLayout>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
 
                 <LinearLayout
+                    android:id="@+id/profile_languages"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"

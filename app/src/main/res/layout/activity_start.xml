@@ -4,29 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient_green"
+    android:background="@drawable/bg_gradient_green_start"
     tools:context=".ui.splash.StartActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
-
+        android:layout_height="match_parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingBottom="100dp">
-
-            <ImageView
-                android:id="@+id/stsc_layout_lottie"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:src="@drawable/assets_startup"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/stsc_layout_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.100000024" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:padding="0dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="0dp"
+                    android:src="@drawable/img_assets_get_started"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/stsc_layout_card"
@@ -37,43 +40,24 @@
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/stsc_layout_lottie">
+                app:layout_constraintTop_toBottomOf="@+id/stsc_layout_img">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/greetings"
                     android:textAlignment="center"
-                    android:textSize="20sp"
+                    android:textSize="45sp"
                     android:textStyle="bold"
-                    android:layout_marginVertical="10dp"
+                    android:layout_marginTop="30dp"
                     android:textColor="@color/white"/>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/materialCardView"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardElevation="2dp"
-                    app:cardCornerRadius="20dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bg_gradient_green_icon"
-                        android:padding="10dp"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginVertical="10dp"
-                            android:letterSpacing="0.1"
-                            android:lineHeight="22dp"
-                            android:text="@string/start_desc"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
-                            android:textSize="13dp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                    android:text="@string/changing_lives_through_giving"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textAlignment="center"/>
             </LinearLayout>
 
             <LinearLayout
@@ -107,15 +91,14 @@
                     app:elevation="2dp"
                     app:cornerRadius="10dp"
                     android:letterSpacing="0.1"
-                    app:backgroundTint="@color/sherpa_blue"
+                    app:backgroundTint="@color/green_one"
                     android:text="@string/login"
                     android:textStyle="bold"
                     android:textColor="@color/white"/>
 
             </LinearLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

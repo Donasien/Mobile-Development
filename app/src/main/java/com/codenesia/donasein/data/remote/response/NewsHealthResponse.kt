@@ -22,10 +22,10 @@ data class ArticlesItem(
 	val urlToImage: String? = null,
 
 	@field:SerializedName("title")
-	val title: String? = null,
+	var title: String? = null,
 
 	@field:SerializedName("url")
-	val url: String? = null,
+	var url: String? = null,
 ) : Parcelable
 
 data class Source(

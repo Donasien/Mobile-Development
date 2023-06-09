@@ -1,13 +1,12 @@
 <resources>
-    <string name="app_name">Donasein</string>
+    <string name="app_name">Donasien</string>
 
     <!--start screen-->
     <string name="start_desc">Donasien is a humanitarian application that focuses on helping health costs for the underprivileged. You can apply for donations for moderate to severe illnesses and also check and analyze for minor illnesses. You can also make donations to help the community.</string>
-    <string name="greeting_title">Welcome to</string>
     <string name="get_started">Get Started</string>
     <string name="login">Sign In</string>
-    <string name="version_app">version 1.0</string>
-    <string name="greetings">Welcome To Donasein!</string>
+    <string name="version_app">version 1.2</string>
+    <string name="greetings">Welcome To Donasien!</string>
     <string name="enter_your_email">enter your email</string>
     <string name="enter_your_password">enter your password</string>
     <string name="forgot_password">Forget Password</string>
@@ -56,6 +55,71 @@
     <string name="enter_date">enter your end date</string>
     <string name="enter_title">enter your title</string>
     <string name="qoute_helping">"The best way to find yourself is to lose yourself in the service of others."</string>
+    <string name="detail_donation">Detail Donation</string>
+    <string name="target_rp300_000_000">Target : Rp300.000.000</string>
+    <string name="_3_days_left">3 days left</string>
+    <string name="disclaimer_payment">Proses transaksi dalam tahap pengembangan, silahkan melihat kedua fitur diatas. Namun jangan melakukan proses transaksi.</string>
+    <string name="address">Alamat Lengkap</string>
+    <string name="family_id">Nomor Kartu Keluarga</string>
+    <string name="rekening">Nomor Rekening</string>
+    <string name="phone">Nomor Telepon</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="fullname">fullname</string>
+    <string name="email">email</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="foto_sampul_donasi">Foto Sampul Donasi</string>
+    <string name="judul_galang_dana">Judul Galang Dana</string>
+    <string name="jumlah_donasi_yang_dibutuhkan">Jumlah donasi yang dibutuhkan</string>
+    <string name="tanggal_donasi_berakhir">Tanggal donasi berakhir</string>
+    <string name="untuk_apa_dana_akan_digunakan">Untuk apa dana akan digunakan</string>
+    <string name="enter_your_stories">enter your stories</string>
+    <string name="choose_sktm">Choose SKTM</string>
+    <string name="foto_sktm">Foto SKTM</string>
+    <string name="choose_ktp">Choose KTP</string>
+    <string name="foto_ktp">Foto KTP</string>
+    <string name="foto_surat_diagnosa_dokter">Foto surat diagnosa dokter</string>
+    <string name="foto_penyakit_atau_hasil_lab">Foto penyakit atau hasil lab</string>
+    <string name="ajukan_donasi">Ajukan Donasi</string>
+    <string name="md">MD</string>
+    <string name="cc">CC</string>
+    <string name="ml">ML</string>
+    <string name="ahmad_fauzan">Ahmad Fauzan</string>
+    <string name="awi_maulana">Awi Maulana</string>
+    <string name="faruq_aziz_saputra">Faruq Aziz Saputra</string>
+    <string name="muhammad_amien_ramdhani">Muhammad Amien Ramdhani</string>
+    <string name="reza_faisal">Reza Faisal</string>
+    <string name="valencia_eurelia_angeliie_tania">Valencia Eurelia Angeliie Tania</string>
+    <string name="qs_1">How do I know if my donation is successful? What do I do if it’s not?</string>
+    <string name="qs_2">Do I need to create an account to donate/fundraise?</string>
+    <string name="qs_3">Can I cancel my donation?</string>
+    <string name="ans_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus mi vitae ante varius, et elementum tellus pharetra. Nullam cursus augue eu tortor aliquam, ut facilisis erat lobortis. Suspendisse eget nunc metus. Integer aliquet lobortis est non luctus. Fusce consectetur suscipit lectus sit amet consequat.</string>
+    <string name="what_is_donasein">What is Donasein?</string>
+    <string name="people_behind_donasein">People Behind Donasein</string>
+    <string name="changing_lives_through_giving">Changing Lives through Giving</string>
+    <string name="jenis_masalah_yang_dihadapi">Jenis masalah yang dihadapi</string>
+    <string name="select_your_type_disaster">select your type disaster</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="jenis_bank">Jenis Bank</string>
+
+    <array name="type_disaster_array">
+        <item>Penyakit</item>
+        <item>Kecelakaan</item>
+    </array>
+
+    <array name="type_bank_array">
+        <item>BRI</item>
+        <item>BCA</item>
+        <item>Mandiri</item>
+        <item>Bank Sulselbar</item>
+        <item>Bank Jatim</item>
+        <item>BSI</item>
+        <item>Bank Bukopin</item>
+    </array>
+
+    <array name="type_gender">
+        <item>Pria</item>
+        <item>Wanita</item>
+    </array>
 
 
 </resources>

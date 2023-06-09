@@ -10,9 +10,10 @@
         <item name="colorSecondaryVariant">@color/sherpa_blue</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:statusBarColor">@color/green_one</item>
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowEnterTransition">@android:transition/no_transition</item>
         <item name="android:windowExitTransition">@android:transition/no_transition</item>

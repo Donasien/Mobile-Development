@@ -159,7 +159,7 @@ data class ProfileData(
     var gender: String? = null,
 
     @field:SerializedName("id")
-    val id: Int? = null,
+    var id: Int? = null,
 
     @field:SerializedName("fullname")
     var fullname: String? = null,

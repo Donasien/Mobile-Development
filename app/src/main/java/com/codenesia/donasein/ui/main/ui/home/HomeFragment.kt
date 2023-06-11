@@ -2,6 +2,7 @@ package com.codenesia.donasein.ui.main.ui.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,8 +11,12 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.codenesia.donasein.R
+import com.codenesia.donasein.data.Results
+import com.codenesia.donasein.data.local.preference.UserPreferences
 import com.codenesia.donasein.databinding.FragmentHomeBinding
 import com.codenesia.donasein.ui.ViewModelFactory
+import com.codenesia.donasein.ui.donateStatus.StatusDonateActivity
+import com.codenesia.donasein.ui.main.ui.donate.DonateViewModel
 import com.codenesia.donasein.ui.submission.SubmissonActivity
 import com.codenesia.donasein.ui.user.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -24,8 +29,10 @@ import www.sanju.motiontoast.MotionToastStyle
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
+    private var statusDonate: String? = null
+    private var statusUser: Boolean? = false
 
-    private val homeViewModel: HomeViewModel by viewModels {
+    private val donateViewModel: DonateViewModel by viewModels {
         ViewModelFactory(requireContext())
     }
 
@@ -40,6 +47,8 @@ class HomeFragment : Fragment() {
         if (user != null) {
             binding.homeTvGreeting.text = "Hello, ${user.displayName}!"
             binding.homeTvHistory.text= "Donation History"
+
+            setStatusDonate()
         }
 
         binding.homeCardHistory.setOnClickListener { historyAction(user) }
@@ -48,18 +57,55 @@ class HomeFragment : Fragment() {
         }
         binding.homeCardGalangdana.setOnClickListener {
             if (user != null) {
-                intentAction("submission")
+                if (statusUser != false) {
+                    intentAction("submission")
+                } else {
+                    showMessage(false, "Lengkapi profile terlebih dahulu")
+                }
             } else {
-                showMessage(false, "Login Terlebih Dahulu")
+                showMessage(false, "Login terlebih dahulu")
+            }
+        }
+
+        binding.homeCardStatus.setOnClickListener {
+            if (user != null) {
+                intentAction("status")
+            } else {
+                showMessage(false, "Login terlebih dahulu")
             }
         }
 
 
     }
 
+    private fun setStatusDonate() {
+        val user = UserPreferences(requireContext())
+        val data = user.getUser()
+        donateViewModel.getStatusDonate(data.tokenId.toString()).observe(requireActivity()){ result ->
+            if (result != null) {
+                when(result) {
+                    is Results.Success -> {
+                        val response = result.data.data
+                        statusDonate = response!!.statusDonation
+                        statusUser = response.statusData
+                        Log.e("Status Donasi", statusDonate.toString())
+                    }
+                    is Results.Loading -> { }
+                    is Results.Error -> {
+                        Log.e("Status Donasi", result.error.toString())
+                    }
+                }
+            }
+        }
+    }
+
     private fun intentAction(route: String) {
         if (route == "submission") {
             startActivity(Intent(requireActivity(), SubmissonActivity::class.java), ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity()).toBundle())
+        } else if (route == "status") {
+            val intentStatus = Intent(requireActivity(), StatusDonateActivity::class.java)
+            intentStatus.putExtra(StatusDonateActivity.RESULT_STATUS_DONATE, statusDonate)
+            startActivity(intentStatus)
         } else {
             showMessage(false, "Dalam Tahap Pengembangan")
         }

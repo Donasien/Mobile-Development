@@ -100,6 +100,14 @@
     <string name="select_your_type_disaster">select your type disaster</string>
     <string name="jenis_kelamin">Jenis Kelamin</string>
     <string name="jenis_bank">Jenis Bank</string>
+    <string name="status_empty">You haven\'t submitted a donation yet</string>
+    <string name="status_pending">Donation requests are currently in review process, please be patient.</string>
+    <string name="status_accept">Congratulations, your donation request has been approved.</string>
+    <string name="status_rejected">Sorry, your donation request has been rejected. Please complete the submission form correctly.</string>
+    <string name="reject">REJECT</string>
+    <string name="accept">ACCEPT</string>
+    <string name="pending">PENDING</string>
+    <string name="empty_donation">EMPTY DONATION</string>
 
     <array name="type_disaster_array">
         <item>Penyakit</item>

@@ -161,6 +161,7 @@ class EditProfileActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
+        finish()
     }
 
     private fun showMessage(check: Boolean, message: String) {

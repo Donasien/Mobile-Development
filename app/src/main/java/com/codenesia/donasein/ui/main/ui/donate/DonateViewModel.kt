@@ -10,6 +10,8 @@ class DonateViewModel(private val donateRepo: DonateRepo) : ViewModel() {
     fun getAllDonate() = donateRepo.getAllDonate()
     fun getDetailDonateById(id: Int) = donateRepo.getDetailDonate(id)
 
+    fun getStatusDonate(token: String) = donateRepo.getStatusDonate(token)
+
     fun submitDonation(
         token: RequestBody,
         title: RequestBody,

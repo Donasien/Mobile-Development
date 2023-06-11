@@ -223,7 +223,7 @@ class SubmissonActivity : AppCompatActivity() {
                     }
                     is Results.Error -> {
                         binding.loadingLottie.visibility = View.GONE
-                        showMessage(false, "Server Prediction Disease Error")
+                        sendData(token, titleDonation, descDonation, targetDonation, dateDonation, file1, file2, file3, file4, file5, "Normal", "Normal")
                     }
                     is Results.Success -> {
                         binding.loadingLottie.visibility = View.GONE

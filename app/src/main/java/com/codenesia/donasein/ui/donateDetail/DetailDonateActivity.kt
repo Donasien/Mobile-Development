@@ -1,23 +1,18 @@
-package com.codenesia.donasein.ui.detailDonate
+package com.codenesia.donasein.ui.donateDetail
 
 import android.content.Intent
 import android.icu.text.NumberFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
 import com.bumptech.glide.Glide
-import com.codenesia.donasein.R
 import com.codenesia.donasein.data.Results
 import com.codenesia.donasein.data.remote.response.DataDonate
 import com.codenesia.donasein.databinding.ActivityDetailDonateBinding
 import com.codenesia.donasein.ui.ViewModelFactory
-import com.codenesia.donasein.ui.main.MainActivity
-import com.codenesia.donasein.ui.main.ui.donate.DonateFragment
 import com.codenesia.donasein.ui.main.ui.donate.DonateViewModel
 import com.codenesia.donasein.ui.payment.PaymentActivity
-import com.codenesia.donasein.ui.user.UserViewModel
 import java.util.*
 
 class DetailDonateActivity : AppCompatActivity() {

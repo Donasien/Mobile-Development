@@ -16,6 +16,7 @@ import com.codenesia.donasein.R
 import com.codenesia.donasein.data.Results
 import com.codenesia.donasein.data.local.preference.UserPreferences
 import com.codenesia.donasein.data.remote.response.LogoutResponse
+import com.codenesia.donasein.data.remote.response.ProfileData
 import com.codenesia.donasein.data.remote.response.UserResponse
 import com.codenesia.donasein.databinding.FragmentProfileBinding
 import com.codenesia.donasein.ui.ViewModelFactory
@@ -106,20 +107,22 @@ class ProfileFragment : Fragment() {
 
     private fun logoutServer() {
         if (auth.currentUser!=null) {
-            val token = auth.currentUser!!.getIdToken(false).result.token.toString()
-            userViewModel.getLogoutResponse(token).observe(viewLifecycleOwner){result ->
-                if (result!=null) {
-                    when(result) {
-                        is Results.Loading -> {
+            val token = UserPreferences(requireContext()).getUser().tokenId
+            if (token != null) {
+                userViewModel.getLogoutResponse(token).observe(viewLifecycleOwner){result ->
+                    if (result!=null) {
+                        when(result) {
+                            is Results.Loading -> {
 
-                        }
+                            }
 
-                        is Results.Success -> {
-                            signOut(result.data)
-                        }
+                            is Results.Success -> {
+                                signOut(result.data)
+                            }
 
-                        is Results.Error -> {
-                            Log.e("Error Logout", result.error.toString())
+                            is Results.Error -> {
+                                Log.e("Error Logout", result.error.toString())
+                            }
                         }
                     }
                 }
@@ -131,6 +134,7 @@ class ProfileFragment : Fragment() {
         auth.signOut()
         val user = UserPreferences(requireActivity())
         val userNull = UserResponse()
+        val profileNull = ProfileData()
         userNull.let {
             it.userId = null
             it.name = null
@@ -139,8 +143,13 @@ class ProfileFragment : Fragment() {
             it.userId = null
             it.tokenId= null
         }
+
+        val nd = "Data is not yet"
+
+
         Log.w("Logout", data.message.toString())
         user.setUser(userNull)
+        user.setProfile(user.getUser(), nd, nd, nd, nd, nd, nd)
         showMessage(true, "Logout success")
         startActivity(Intent(requireActivity(), StartActivity::class.java))
         activity?.finish()

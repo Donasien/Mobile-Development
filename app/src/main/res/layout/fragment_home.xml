@@ -204,6 +204,7 @@
                             android:layout_weight="1">
 
                             <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/home_card_scanning"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -288,6 +289,7 @@
                             android:layout_weight="1">
 
                             <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/home_card_status"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"

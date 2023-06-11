@@ -1,7 +1,6 @@
 package com.codenesia.donasein.ui.main.ui.donate
 
 import android.content.Intent
-import android.graphics.RenderEffect
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -15,7 +14,7 @@ import com.codenesia.donasein.data.Results
 import com.codenesia.donasein.data.remote.response.ArticlesItem
 import com.codenesia.donasein.databinding.FragmentDonateBinding
 import com.codenesia.donasein.ui.ViewModelFactory
-import com.codenesia.donasein.ui.detailDonate.DetailDonateActivity
+import com.codenesia.donasein.ui.donateDetail.DetailDonateActivity
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel

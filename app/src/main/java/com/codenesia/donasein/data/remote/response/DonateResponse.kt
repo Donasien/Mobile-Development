@@ -135,3 +135,27 @@ data class MedicalApiResponse(
 	val predictionLung: String? = null
 ) : Parcelable
 
+
+@Parcelize
+data class DonationStatusResponse(
+
+	@field:SerializedName("data")
+	val data: DonationStatusData? = null,
+
+	@field:SerializedName("success")
+	val success: Boolean? = null,
+
+	@field:SerializedName("message")
+	val message: String? = null
+) : Parcelable
+
+@Parcelize
+data class DonationStatusData(
+
+	@field:SerializedName("status_donation")
+	val statusDonation: String? = null,
+
+	@field:SerializedName("status_data")
+	val statusData: Boolean? = null
+) : Parcelable
+

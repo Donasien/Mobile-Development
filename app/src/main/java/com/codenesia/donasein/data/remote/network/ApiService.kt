@@ -87,6 +87,11 @@ interface ApiService {
         @Part("type_disaster") type_disaster: RequestBody
     ) : SubmitDonationResponse
 
+    @GET("donation-status")
+    suspend fun getStatusDonasi(
+        @Query("token") token: String
+    ) : DonationStatusResponse
+
     @Multipart
     @POST("predict-disease")
     suspend fun getPredictResult(

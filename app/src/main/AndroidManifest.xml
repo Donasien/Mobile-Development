@@ -48,7 +48,10 @@
             android:name=".ui.payment.PaymentActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.detailDonate.DetailDonateActivity"
+            android:name=".ui.donateDetail.DetailDonateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.donateStatus.StatusDonateActivity"
             android:exported="false" />
         <activity
             android:name=".ui.camera.CameraActivity"

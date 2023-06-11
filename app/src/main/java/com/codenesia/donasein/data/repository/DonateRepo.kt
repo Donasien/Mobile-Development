@@ -43,6 +43,17 @@ class DonateRepo(private val apiService: ApiService) {
         }
     }
 
+    fun getStatusDonate(token: String): LiveData<Results<DonationStatusResponse>> = liveData {
+        emit(Results.Loading)
+        try {
+            val response = apiService.getStatusDonasi(token)
+            emit(Results.Success(response))
+        } catch (e: Exception) {
+            Log.e("Get Status Donate", e.message.toString())
+            emit(Results.Error(e.message.toString()))
+        }
+    }
+
     fun getPredictResult(token: RequestBody, file: MultipartBody.Part): LiveData<Results<MedicalApiResponse>> = liveData {
         emit(Results.Loading)
         try {

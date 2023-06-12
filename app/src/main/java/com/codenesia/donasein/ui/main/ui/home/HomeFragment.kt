@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
         val user = auth.currentUser
         if (user != null) {
             binding.homeTvGreeting.text = "Hello, ${user.displayName}!"
-            binding.homeTvHistory.text= "Donation History"
+            binding.homeTvHistory.text = "Donation History"
 
             setStatusDonate()
         }
@@ -58,7 +58,11 @@ class HomeFragment : Fragment() {
         binding.homeCardGalangdana.setOnClickListener {
             if (user != null) {
                 if (statusUser != false) {
-                    intentAction("submission")
+                    if (statusDonate == "accept" || statusDonate == "pending") {
+                        showMessage(false, "Kamu telah melakukan pengajuan donasi")
+                    } else {
+                        intentAction("submission")
+                    }
                 } else {
                     showMessage(false, "Lengkapi profile terlebih dahulu")
                 }

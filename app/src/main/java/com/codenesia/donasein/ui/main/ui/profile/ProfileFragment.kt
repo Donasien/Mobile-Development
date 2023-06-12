@@ -113,11 +113,12 @@ class ProfileFragment : Fragment() {
                     if (result!=null) {
                         when(result) {
                             is Results.Loading -> {
-
+                                binding.loadingLottie.visibility = View.VISIBLE
                             }
 
                             is Results.Success -> {
                                 signOut(result.data)
+                                binding.loadingLottie.visibility = View.GONE
                             }
 
                             is Results.Error -> {

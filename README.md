@@ -9,13 +9,19 @@ Here is our repository for Bangkit 2023 Capstone project - Mobile Development
 | :------------: | :-----------------: | :------------------------: |:------------------------: |
 | Create Design/Resource App   |  Build User API     | Build Donation API  | Build Machine Learning and Testing App  |
 
-## Donasie - Changing Lives Through Giving
+## Donasien - Changing Lives Through Giving
 ![CloudArchitecture](https://github.com/Donasien/backend/blob/assets/img/Architecture_GCP.png)
 
 ## Backend Description
-Donasien is an android-based application developed using Kotlin language and some additional libraries. Donasien is a humanitarian donation application that focuses on the medical field.
+Donasien is an android-based application developed using Kotlin language and some additional libraries. Donasien is a humanitarian donation application that focuses on the medical field. This application uses firebase as the main server and web backend as the second server. In this application there is also local database storage such as shared preferences. Donasien also supports payment gateway (Midtrans) using midtrans library. This application supports donation payments via e-wallet or bank transactions.
 <br>
-Additionally, Laravel provides a landing page and a web admin interface. The web admin can view, edit, and delete various data stored in the database. For example, they can edit donation data to mark a fundraising campaign as accepted. We deploy this Laravel application on a Compute Engine, utilizing a Persistent Disk for storage, and MySQL in a VM as the database. The database in the VM is also connected to Flask from the machine learning path, making the Flask API private. Therefore, anyone who wants to access the Flask API must have a token that will be validated in the database. Lastly, we deploy Flask on Cloud Run, which allows the application to be hosted and run in a scalable manner
+<br>
+Donasien are divided into two roles, namely anonymous and user.
+1. Anonymous
+The anonymous role is where you run the donpatient application without doing the login/register process and without completing the profile provided. In this role you cannot submit donations and blood donations, you can only help existing donations.
+
+2. User
+The user role is where you run the donation application by doing the login/register process, then completing the files and personal data on the profile page. In this role you can apply for donations and blood donations.
 
 ## WEB & API URL
 [Donasien Web & API](https://donasien.me/)

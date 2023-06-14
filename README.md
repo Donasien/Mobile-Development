@@ -44,5 +44,5 @@ Donasien is an android-based application developed using Kotlin language and som
 This project is licensed under the MIT License.
 
 ## Contact
-If you have any questions, feel free to reach out to me at [donasien@me.com].
+If you have any questions, feel free to reach out to me at donasien@me.com.
 

@@ -21,15 +21,28 @@ Donasien is an android-based application developed using Kotlin language and som
 <br>
 
 ## Installation Guide
-* Clone this repository
-* Open the project in Android Studio
-* Build and sync gradle
-* Running the app on virtual device or more
+1. Clone this repository.
+2. Open the project in Android Studio.
+3. Build and sync gradle.
+4. Running the app on virtual device or more.
 <br>
 
 ## Libraries Used
-* Clone this repository
-* Open the project in Android Studio
-* Build and sync gradle
-* Running the app on virtual device or more
+* Retrofit2 (com.squareup.retrofit2:retrofit)
+* Lottie Animation (com.airbnb.android:lottie)
+* Glide (com.github.bumptech.glide:glide)
+* Image Slideshow (com.github.denzcoskun:ImageSlideshow)
+* Motion Toast (com.github.Spikeysanju:MotionToast)
+* Shape of View (io.github.florent37:shapeofview)
+* Animated Progressbar (com.github.mckrpk:AnimatedProgressBar)
+* Midtrans UI KIT (com.midtrans:uikit)
+* Expendable Layout (com.github.skydoves:expandablelayout)
+* Power Spinner (com.github.skydoves:powerspinner)
 <br>
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+If you have any questions, feel free to reach out to me at [donasien@me.com].
+

@@ -5,22 +5,19 @@ Here is our repository for Bangkit 2023 Capstone project - Mobile Development
 ## Mobile Development Schedule
 |     Week 1     |       Week 2        |            Week 3          |           Week 4          |
 | :------------: | :-----------------: | :------------------------: |:------------------------: |
-| Create Design/Resource App   |  Build User API     | Build Donation API  | Build Machine Learning and Testing App  |
+| Create Design/Resource App   |  Build User Features API     | Build Donation Features API  | Build Scanning Features and Testing App  |
 
 ## Donasien - Changing Lives Through Giving
-![CloudArchitecture](https://github.com/Donasien/backend/blob/assets/img/Architecture_GCP.png)
-
-## App Description
 Donasien is an android-based application developed using Kotlin language and some additional libraries. Donasien is a humanitarian donation application that focuses on the medical field. This application uses firebase as the main server and web backend as the second server. In this application there is also local database storage such as shared preferences. Donasien also supports payment gateway (Midtrans) using midtrans library. This application supports donation payments via e-wallet or bank transactions.
 <br>
 
 ## Features
 * User Features <br>
-![UserFeatures](https://github.com/Donasien/Mobile-Development/blob/master/user-features.png)
+<img src="https://github.com/Donasien/Mobile-Development/blob/master/user-features.png" width="600" height="auto">
 * Donation Features <br>
-![DonationFeatures](https://github.com/Donasien/Mobile-Development/blob/master/donation-features.png)
+<img src="https://github.com/Donasien/Mobile-Development/blob/master/donation-features.png" width="600" height="auto">
 * Scanning & Submission Features <br>
-![Scanning&SubFeatures](https://github.com/Donasien/Mobile-Development/blob/master/subm-features.png)
+<img src="https://github.com/Donasien/Mobile-Development/blob/master/subm-features.png" width="600" height="auto">
 
 
 
@@ -52,6 +49,7 @@ Donasien is an android-based application developed using Kotlin language and som
 
 ## License
 This project is licensed under the MIT License.
+<br>
 
 ## Contact
 If you have any questions, feel free to reach out to me at donasien@me.com.

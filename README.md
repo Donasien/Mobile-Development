@@ -14,6 +14,16 @@ Here is our repository for Bangkit 2023 Capstone project - Mobile Development
 Donasien is an android-based application developed using Kotlin language and some additional libraries. Donasien is a humanitarian donation application that focuses on the medical field. This application uses firebase as the main server and web backend as the second server. In this application there is also local database storage such as shared preferences. Donasien also supports payment gateway (Midtrans) using midtrans library. This application supports donation payments via e-wallet or bank transactions.
 <br>
 
+## Features
+* User Features
+![UserFeatures](https://github.com/Donasien/Mobile-Development/blob/master/user-features.png)
+* Donation Features
+![DonationFeatures](https://github.com/Donasien/Mobile-Development/blob/master/donation-features.png)
+* Scanning & Submission Features
+![Scanning&SubFeatures](https://github.com/Donasien/Mobile-Development/blob/master/subm-features.png)
+
+
+
 ## Requirement
 * Android SDK version 28 or later.
 * Android Studio latest version.

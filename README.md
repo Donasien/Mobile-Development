@@ -12,12 +12,18 @@ Donasien is an android-based application developed using Kotlin language and som
 <br>
 
 ## Features
-* User Features <br>
-<img src="https://github.com/Donasien/Mobile-Development/blob/master/user-features.png" width="600" height="auto">
-* Donation Features <br>
-<img src="https://github.com/Donasien/Mobile-Development/blob/master/donation-features.png" width="600" height="auto">
-* Scanning & Submission Features <br>
-<img src="https://github.com/Donasien/Mobile-Development/blob/master/subm-features.png" width="600" height="auto">
+* User Features 
+  <br> <br>
+  <img src="https://github.com/Donasien/Mobile-Development/blob/master/user-features.png" width="600" height="auto">
+  <br> <br>
+* Donation Features
+  <br> <br>
+  <img src="https://github.com/Donasien/Mobile-Development/blob/master/donation-features.png" width="600" height="auto">
+  <br> <br>
+* Scanning & Submission Features
+  <br> <br>
+  <img src="https://github.com/Donasien/Mobile-Development/blob/master/subm-features.png" width="600" height="auto">
+  <br> <br>
 
 
 

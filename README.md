@@ -34,7 +34,7 @@ Donasien is an android-based application developed using Kotlin language and som
 <br>
 
 ## Installation Guide
-1. Clone this repository.
+1. Clone this repository https://github.com/Donasien/Mobile-Development.git .
 2. Open the project in Android Studio.
 3. Build and sync gradle.
 4. Running the app on virtual device or more.
